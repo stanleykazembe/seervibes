@@ -1,0 +1,141 @@
+/* Ensure the body and html cover the full viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    color: white;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 1.5em;
+    display: inline-block;
+}
+.navbar {
+    display: flex;
+    justify-content: center;  /* Centers the links horizontally */
+    align-items: center;      /* Ensures the links are vertically centered */
+    list-style: none;         /* Removes default list style */
+    padding: 0;               /* Removes any default padding */
+    margin: 0;
+    size: 10px;                /* Removes any default margin */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;  /* Aligns the buttons to the right */
+    align-items: center;
+}
+.auth-buttons .btn {
+    padding: 10px 50px;
+    color: white;
+    text-decoration: none;
+    background-color: #ff6347;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #e53e32;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Darken the background video by 30% */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 70% opacity to darken */
+    z-index: 0;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    background-color: #ff634750;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #e53e32;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
